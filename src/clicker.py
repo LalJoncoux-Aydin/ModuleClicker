@@ -23,7 +23,8 @@ def main():
 
     win.blit(module.img, (280,320))
     win.blit(infobar.text, infobar.textRect)
-    win.blit(students.text, students.textRect)
+    win.blit(students.player1, students.player1_Rect)
+    win.blit(students.player2, students.player2_Rect)
 
     credits = 0
     credit_font = pygame.font.Font('freesansbold.ttf', 32)
