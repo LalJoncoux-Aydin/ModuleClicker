@@ -25,6 +25,13 @@ def main():
     win.blit(infobar.text, infobar.textRect)
     win.blit(students.text, students.textRect)
 
+    credits = 0
+    credit_font = pygame.font.Font('freesansbold.ttf', 32)
+    credit_text = credit_font.render(str(credits), True, class_display.green, class_display.violet)
+    credit_textRect = credit_text.get_rect()
+    credit_textRect.center = (720, 50)
+    win.blit(credit_text, credit_textRect)
+
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -32,6 +39,10 @@ def main():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mx, my = pygame.mouse.get_pos()
+                if mx > 280 and mx < 500 and my > 320 and my < 550:
+                    credits += 1
+                    credit_text = credit_font.render(str(credits), True, class_display.green, class_display.violet)
+                    win.blit(credit_text, credit_textRect)
         time.sleep(0.03)
         pygame.display.update()
     return
