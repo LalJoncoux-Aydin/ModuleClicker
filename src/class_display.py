@@ -34,7 +34,7 @@ class Module:
 class Students:
     def __init__(self):
         self.color = darkblue
-        self.pos = (1000,0,800,800)
+        self.selected_color = white
         self.font = pygame.font.Font('freesansbold.ttf', 32)
 
         # Students 1
