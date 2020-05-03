@@ -13,24 +13,26 @@ def main():
 
     # Init graphical elements
     module = class_display.Module()
-    infobar = class_display.InfoBar()
     students = class_display.Students()
 
     # Display graphical elements
     pygame.draw.rect(win, module.color, module.pos)
-    pygame.draw.rect(win, infobar.color, infobar.pos)
     pygame.draw.rect(win, students.color, students.pos)
 
-    win.blit(module.img, (280,320))
-    win.blit(infobar.text, infobar.textRect)
+    win.blit(module.img, (90,320))
     win.blit(students.player1, students.player1_Rect)
     win.blit(students.player2, students.player2_Rect)
+    win.blit(students.player3, students.player3_Rect)
+    win.blit(students.player4, students.player4_Rect)
+    win.blit(students.player5, students.player5_Rect)
+    win.blit(students.player6, students.player6_Rect)
 
     credits = 0
     credit_font = pygame.font.Font('freesansbold.ttf', 32)
-    credit_text = credit_font.render(str(credits), True, class_display.green, class_display.violet)
+    credits_display = "Credits : " + str(credits)
+    credit_text = credit_font.render(credits_display, True, class_display.green, class_display.blue)
     credit_textRect = credit_text.get_rect()
-    credit_textRect.center = (720, 50)
+    credit_textRect.center = (200, 200)
     win.blit(credit_text, credit_textRect)
 
     while True:
@@ -42,7 +44,8 @@ def main():
                 mx, my = pygame.mouse.get_pos()
                 if mx > 280 and mx < 500 and my > 320 and my < 550:
                     credits += 1
-                    credit_text = credit_font.render(str(credits), True, class_display.green, class_display.violet)
+                    credits_display = "Credits : " + str(credits)
+                    credit_text = credit_font.render(credits_display, True, class_display.green, class_display.violet)
                     win.blit(credit_text, credit_textRect)
         time.sleep(0.03)
         pygame.display.update()
