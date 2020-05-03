@@ -42,10 +42,10 @@ def main():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mx, my = pygame.mouse.get_pos()
-                if mx > 280 and mx < 500 and my > 320 and my < 550:
+                if mx > 90 and mx < 320 and my > 320 and my < 550:
                     credits += 1
                     credits_display = "Credits : " + str(credits)
-                    credit_text = credit_font.render(credits_display, True, class_display.green, class_display.violet)
+                    credit_text = credit_font.render(credits_display, True, class_display.green, class_display.blue)
                     win.blit(credit_text, credit_textRect)
         time.sleep(0.03)
         pygame.display.update()
