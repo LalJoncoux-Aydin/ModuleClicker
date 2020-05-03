@@ -8,7 +8,7 @@ def main():
 
     # Init screen
     win = pygame.display.set_mode((1500,750),0,32)
-    win.fill(class_display.white)
+    win.fill(class_display.black)
     pygame.display.set_caption('Module Clicker')
 
     # Init Module clicking part
@@ -19,12 +19,17 @@ def main():
 
     # Init and draw Students buying part
     students = class_display.Students()
-    pygame.draw.rect(win, students.color, students.pos)
+    pygame.draw.rect(win, students.color, students.stu1_pos)
     win.blit(students.stu1, students.stu1_rect)
+    pygame.draw.rect(win, students.color, students.stu2_pos)
     win.blit(students.stu2, students.stu2_rect)
+    pygame.draw.rect(win, students.color, students.stu3_pos)
     win.blit(students.stu3, students.stu3_rect)
+    pygame.draw.rect(win, students.color, students.stu4_pos)
     win.blit(students.stu4, students.stu4_rect)
+    pygame.draw.rect(win, students.color, students.stu5_pos)
     win.blit(students.stu5, students.stu5_rect)
+    pygame.draw.rect(win, students.color, students.stu6_pos)
     win.blit(students.stu6, students.stu6_rect)
 
     # Init and draw Students displaying part

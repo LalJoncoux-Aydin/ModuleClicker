@@ -8,6 +8,7 @@ darkblue = (43, 40, 79)
 violet = (67, 40, 79)
 green = (0, 255, 0)
 white = (255,255,255)
+black = (0, 0, 0)
 
 class Module:
     my_credits = 0
@@ -39,29 +40,35 @@ class Students:
         # Students 1
         self.stu1 = self.font.render('Githubber', True, green, darkblue)
         self.stu1_rect = self.stu1.get_rect()
-        self.stu1_rect.center = (1270, 100)
+        self.stu1_rect.center = (1270, 60)
+        self.stu1_pos = (1000,0,800,120)
 
         # Students 2
         self.stu2 = self.font.render('Etudiant lambda', True, green, darkblue)
         self.stu2_rect = self.stu2.get_rect()
-        self.stu2_rect.center = (1270, 220)
+        self.stu2_rect.center = (1270, 190)
+        self.stu2_pos = (1000,130,800,120)
 
         # Students 3
         self.stu3 = self.font.render('Etudiant motivé', True, green, darkblue)
         self.stu3_rect = self.stu3.get_rect()
-        self.stu3_rect.center = (1270, 340)
+        self.stu3_rect.center = (1270, 320)
+        self.stu3_pos = (1000,260,800,120)
 
         # Students 4
         self.stu4 = self.font.render('Etudiant déterminé', True, green, darkblue)
         self.stu4_rect = self.stu4.get_rect()
-        self.stu4_rect.center = (1270, 460)
+        self.stu4_rect.center = (1270, 450)
+        self.stu4_pos = (1000,390,800,120)
 
         # Students 5
         self.stu5 = self.font.render('Astek', True, green, darkblue)
         self.stu5_rect = self.stu5.get_rect()
-        self.stu5_rect.center = (1270, 570)
+        self.stu5_rect.center = (1270, 580)
+        self.stu5_pos = (1000,520,800,120)
 
         # Students 6
         self.stu6 = self.font.render('Monstre', True, green, darkblue)
         self.stu6_rect = self.stu6.get_rect()
-        self.stu6_rect.center = (1270, 680)
+        self.stu6_rect.center = (1270, 700)
+        self.stu6_pos = (1000,650,800,120)
