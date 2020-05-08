@@ -23,24 +23,24 @@ def displayStudents(win, game_students):
     win.blit(game_students.stu6, game_students.stu6_rect)
     return
 
-def displayProduction(win, students, production):
-    win.blit(production.github, (450,20))
-    win.blit(production.git_text, production.git_rect)
+def displayProduction(win, game_students, game_production):
+    win.blit(game_production.github, (450,20))
+    win.blit(game_production.git_text, game_production.git_rect)
 
-    win.blit(production.schoolboy, (450,140))
-    win.blit(production.boy_text, production.boy_rect)
+    win.blit(game_production.schoolboy, (450,140))
+    win.blit(game_production.boy_text, game_production.boy_rect)
 
-    win.blit(production.aztec, (450,250))
-    win.blit(production.aztec_text, production.aztec_rect)
+    win.blit(game_production.aztec, (450,250))
+    win.blit(game_production.aztec_text, game_production.aztec_rect)
 
-    win.blit(production.koala, (450,380))
-    win.blit(production.koala_text, production.koala_rect)
+    win.blit(game_production.koala, (450,380))
+    win.blit(game_production.koala_text, game_production.koala_rect)
 
-    win.blit(production.monster, (450,550))
-    win.blit(production.monster_text, production.monster_rect)
+    win.blit(game_production.monster, (450,550))
+    win.blit(game_production.monster_text, game_production.monster_rect)
 
-    win.blit(production.gourou, (450,650))
-    win.blit(production.gourou_text, production.gourou_rect)
+    win.blit(game_production.gourou, (450,650))
+    win.blit(game_production.gourou_text, game_production.gourou_rect)
     return
 
 def displaySeparators(win, separators):

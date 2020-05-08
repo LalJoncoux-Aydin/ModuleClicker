@@ -4,6 +4,7 @@ import class_display
 import player
 import student
 import display
+import production
 from pygame.locals import *
 
 def selectStudents(win, game_students, mx, my):
@@ -40,12 +41,14 @@ def main():
     win = pygame.display.set_mode((1500,750),0,32)
     pygame.display.set_caption('Module Clicker')
 
-    # Init graphic
-    game_player = player.Player()
+    # Init locals
     module = class_display.Module()
-    game_students = student.Students()
     separators = class_display.Separators()
-    production = class_display.Production()
+
+    # Init game
+    game_player = player.Player()
+    game_students = student.Students()
+    game_production = production.Production()
 
     while True:
         # if game_player.stu_ready == True:
@@ -55,7 +58,7 @@ def main():
         display.displayModule(win, module)
         display.displayStudents(win, game_students)
         display.displaySeparators(win, separators)
-        display.displayProduction(win, game_students, production)
+        display.displayProduction(win, game_students, game_production)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
