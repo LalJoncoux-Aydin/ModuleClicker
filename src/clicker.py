@@ -58,7 +58,7 @@ def main():
         display.displayModule(win, module)
         display.displayStudents(win, game_students)
         display.displaySeparators(win, separators)
-        display.displayProduction(win, game_students, game_production)
+        display.displayProduction(win, game_production)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -68,9 +68,11 @@ def main():
                 mx, my = pygame.mouse.get_pos()
                 if mx > 90 and mx < 320 and my > 320 and my < 550:
                     game_player.addCredit(1)
-                    module.displayCredit(game_player.credit)
+                    module.updateCredit(game_player.credit)
                     win.blit(module.credit_text, module.credit_textRect)
-                selectStudents(win, game_students, mx, my)
+                else:
+                    selectStudents(win, game_students, mx, my)
+                    game_production.updateQuantity(game_students)
         pygame.display.update()
         time.sleep(0.1)
         pygame.display.update()

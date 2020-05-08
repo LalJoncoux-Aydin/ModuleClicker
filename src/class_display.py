@@ -26,7 +26,7 @@ class Module:
         self.credit_textRect = self.credit_text.get_rect()
         self.credit_textRect.center = (200, 200)
 
-    def displayCredit(self, own_credit):
+    def updateCredit(self, own_credit):
         self.my_credits_display = "Credits : " + str(own_credit)
         self.credit_text = self.credit_font.render(self.my_credits_display, True, lightgrey, darkblue)
 
