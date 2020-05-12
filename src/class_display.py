@@ -5,13 +5,13 @@ from pygame.locals import *
 # colors
 blue = (0,0,255)
 darkblue = (61, 90, 128)
-violet = (67, 40, 79)
 grey = (83, 98, 113)
 white = (255,255,255)
 black = (0, 0, 0)
 grey = (11, 20, 35)
 lightgrey = (174, 174, 175)
 select_lightgrey = (210, 208, 202)
+violet = (131, 52, 113)
 
 class Module:
     def __init__(self):
@@ -33,7 +33,7 @@ class Module:
 class Separators:
     color = lightgrey
     h_pos_1 = (400,0,15,750)
-    h_pos_2 = (600,0,5,750)
-    h_pos_3 = (800,0,5,750)
-    h_pos_4 = (900,0,5,750)
+    h_pos_2 = (575,0,5,750)
+    h_pos_3 = (730,0,5,750)
+    h_pos_4 = (875,0,5,750)
     h_pos_5 = (1005,0,15,750)

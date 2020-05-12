@@ -9,34 +9,40 @@ def displayModule(win, module):
     return
 
 def displayStudents(win, game_students):
-    pygame.draw.rect(win, game_students.color, game_students.stu1_pos)
+    pygame.draw.rect(win, game_students.stu1_color, game_students.stu1_pos)
     win.blit(game_students.stu1, game_students.stu1_rect)
-    pygame.draw.rect(win, game_students.color, game_students.stu2_pos)
+    win.blit(game_students.stu1_price, game_students.stu1_price_rect)
+    pygame.draw.rect(win, game_students.stu2_color, game_students.stu2_pos)
     win.blit(game_students.stu2, game_students.stu2_rect)
-    pygame.draw.rect(win, game_students.color, game_students.stu3_pos)
+    win.blit(game_students.stu2_price, game_students.stu2_price_rect)
+    pygame.draw.rect(win, game_students.stu3_color, game_students.stu3_pos)
     win.blit(game_students.stu3, game_students.stu3_rect)
-    pygame.draw.rect(win, game_students.color, game_students.stu4_pos)
+    win.blit(game_students.stu3_price, game_students.stu3_price_rect)
+    pygame.draw.rect(win, game_students.stu4_color, game_students.stu4_pos)
     win.blit(game_students.stu4, game_students.stu4_rect)
-    pygame.draw.rect(win, game_students.color, game_students.stu5_pos)
+    win.blit(game_students.stu4_price, game_students.stu4_price_rect)
+    pygame.draw.rect(win, game_students.stu5_color, game_students.stu5_pos)
     win.blit(game_students.stu5, game_students.stu5_rect)
-    pygame.draw.rect(win, game_students.color, game_students.stu6_pos)
+    win.blit(game_students.stu5_price, game_students.stu5_price_rect)
+    pygame.draw.rect(win, game_students.stu6_color, game_students.stu6_pos)
     win.blit(game_students.stu6, game_students.stu6_rect)
+    win.blit(game_students.stu6_price, game_students.stu6_price_rect)
     return
 
 def displayProduction(win, game_production):
     win.blit(game_production.github, (450,20))
     win.blit(game_production.git_text, game_production.git_rect)
 
-    win.blit(game_production.schoolboy, (450,140))
+    win.blit(game_production.schoolboy, (445,130))
     win.blit(game_production.boy_text, game_production.boy_rect)
 
-    win.blit(game_production.aztec, (450,250))
+    win.blit(game_production.aztec, (440,250))
     win.blit(game_production.aztec_text, game_production.aztec_rect)
 
-    win.blit(game_production.koala, (450,380))
+    win.blit(game_production.koala, (435,375))
     win.blit(game_production.koala_text, game_production.koala_rect)
 
-    win.blit(game_production.monster, (450,540))
+    win.blit(game_production.monster, (453,530))
     win.blit(game_production.monster_text, game_production.monster_rect)
 
     win.blit(game_production.gourou, (455,640))

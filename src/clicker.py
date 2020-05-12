@@ -53,6 +53,7 @@ def main():
     while True:
         # if game_player.stu_ready == True:
         #     game_player.addCredit(students.to_add_total)
+        game_students.redrawStudents(game_player)
 
         win.fill(class_display.grey)
         display.displayModule(win, module)
