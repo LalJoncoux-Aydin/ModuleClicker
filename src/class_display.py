@@ -11,7 +11,7 @@ black = (0, 0, 0)
 grey = (11, 20, 35)
 lightgrey = (174, 174, 175)
 select_lightgrey = (210, 208, 202)
-violet = (131, 52, 113)
+violet = (85, 91, 110)
 
 class Module:
     i = 52

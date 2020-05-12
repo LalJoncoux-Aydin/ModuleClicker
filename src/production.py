@@ -8,6 +8,7 @@ class Production:
 
     def __init__(self):
         self.font = pygame.font.Font('freesansbold.ttf', 32)
+        self.upgrade = pygame.image.load("../assets/upgrade.png").convert_alpha()
 
         self.github = pygame.image.load("../assets/github.png").convert_alpha()
         self.git_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)

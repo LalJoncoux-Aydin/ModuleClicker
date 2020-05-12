@@ -39,21 +39,27 @@ def displayStudents(win, game_students):
 
 def displayProduction(win, game_production):
     win.blit(game_production.github, (445,20))
+    win.blit(game_production.upgrade, (770,30))
     win.blit(game_production.git_text, game_production.git_rect)
 
     win.blit(game_production.schoolboy, (445,130))
+    win.blit(game_production.upgrade, (770,150))
     win.blit(game_production.boy_text, game_production.boy_rect)
 
     win.blit(game_production.aztec, (440,250))
+    win.blit(game_production.upgrade, (770,280))
     win.blit(game_production.aztec_text, game_production.aztec_rect)
 
     win.blit(game_production.koala, (435,375))
+    win.blit(game_production.upgrade, (770,410))
     win.blit(game_production.koala_text, game_production.koala_rect)
 
     win.blit(game_production.monster, (453,530))
+    win.blit(game_production.upgrade, (770,540))
     win.blit(game_production.monster_text, game_production.monster_rect)
 
     win.blit(game_production.gourou, (455,640))
+    win.blit(game_production.upgrade, (770,660))
     win.blit(game_production.gourou_text, game_production.gourou_rect)
     return
 
