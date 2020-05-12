@@ -22,6 +22,7 @@ class Students:
         self.available_color = class_display.darkblue
         self.selected_color = class_display.select_lightgrey
         self.font = pygame.font.Font('freesansbold.ttf', 32)
+        self.coin = pygame.image.load("../assets/coin.png").convert_alpha()
 
         # Students 1
         self.stu1_color = self.color
@@ -30,7 +31,7 @@ class Students:
         self.stu1_selected = self.font.render('Githubber', True, class_display.lightgrey, class_display.select_lightgrey)
 
         self.stu1_rect = self.stu1.get_rect()
-        self.stu1_rect.center = (1200, 60)
+        self.stu1_rect.center = (1150, 60)
         self.stu1_price_rect = self.stu1_price.get_rect()
         self.stu1_price_rect.center = (1380, 60)
 
@@ -43,7 +44,7 @@ class Students:
         self.stu2_selected = self.font.render('Etudiant', True, class_display.lightgrey, class_display.select_lightgrey)
 
         self.stu2_rect = self.stu2.get_rect()
-        self.stu2_rect.center = (1200, 190)
+        self.stu2_rect.center = (1150, 190)
         self.stu2_price_rect = self.stu2_price.get_rect()
         self.stu2_price_rect.center = (1380, 190)
 
@@ -56,7 +57,7 @@ class Students:
         self.stu3_selected = self.font.render('Astek', True, class_display.lightgrey, class_display.select_lightgrey)
 
         self.stu3_rect = self.stu3.get_rect()
-        self.stu3_rect.center = (1200, 320)
+        self.stu3_rect.center = (1150, 320)
         self.stu3_price_rect = self.stu3_price.get_rect()
         self.stu3_price_rect.center = (1380, 320)
 
@@ -69,7 +70,7 @@ class Students:
         self.stu4_selected = self.font.render('Koala', True, class_display.lightgrey, class_display.select_lightgrey)
 
         self.stu4_rect = self.stu4.get_rect()
-        self.stu4_rect.center = (1200, 450)
+        self.stu4_rect.center = (1150, 450)
         self.stu4_price_rect = self.stu4_price.get_rect()
         self.stu4_price_rect.center = (1380, 450)
 
@@ -82,7 +83,7 @@ class Students:
         self.stu5_selected = self.font.render('Monstre', True, class_display.lightgrey, class_display.select_lightgrey)
 
         self.stu5_rect = self.stu5.get_rect()
-        self.stu5_rect.center = (1200, 580)
+        self.stu5_rect.center = (1150, 580)
         self.stu5_price_rect = self.stu5_price.get_rect()
         self.stu5_price_rect.center = (1380, 580)
 
@@ -95,7 +96,7 @@ class Students:
         self.stu6_selected = self.font.render('Gourou', True, class_display.lightgrey, class_display.select_lightgrey)
 
         self.stu6_rect = self.stu6.get_rect()
-        self.stu6_rect.center = (1200, 700)
+        self.stu6_rect.center = (1150, 700)
         self.stu6_price_rect = self.stu6_price.get_rect()
         self.stu6_price_rect.center = (1380, 700)
 
@@ -150,17 +151,17 @@ class Students:
         self.nbStudents1 += 1
         return 1
     def AddStudents2(self):
-        self.nbStudents2 += 2
+        self.nbStudents2 += 1
         return 2
     def AddStudents3(self):
-        self.nbStudents3 += 3
+        self.nbStudents3 += 1
         return 3
     def AddStudents4(self):
-        self.nbStudents4 += 4
+        self.nbStudents4 += 1
         return 4
     def AddStudents5(self):
-        self.nbStudents5 += 5
+        self.nbStudents5 += 1
         return 5
     def AddStudents6(self):
-        self.nbStudents6 += 6
+        self.nbStudents6 += 1
         return 6

@@ -10,27 +10,33 @@ def displayModule(win, module):
 
 def displayStudents(win, game_students):
     pygame.draw.rect(win, game_students.stu1_color, game_students.stu1_pos)
+    win.blit(game_students.coin, (1270,30))
     win.blit(game_students.stu1, game_students.stu1_rect)
     win.blit(game_students.stu1_price, game_students.stu1_price_rect)
     pygame.draw.rect(win, game_students.stu2_color, game_students.stu2_pos)
+    win.blit(game_students.coin, (1270,165))
     win.blit(game_students.stu2, game_students.stu2_rect)
     win.blit(game_students.stu2_price, game_students.stu2_price_rect)
     pygame.draw.rect(win, game_students.stu3_color, game_students.stu3_pos)
+    win.blit(game_students.coin, (1270,295))
     win.blit(game_students.stu3, game_students.stu3_rect)
     win.blit(game_students.stu3_price, game_students.stu3_price_rect)
     pygame.draw.rect(win, game_students.stu4_color, game_students.stu4_pos)
+    win.blit(game_students.coin, (1270,420))
     win.blit(game_students.stu4, game_students.stu4_rect)
     win.blit(game_students.stu4_price, game_students.stu4_price_rect)
     pygame.draw.rect(win, game_students.stu5_color, game_students.stu5_pos)
+    win.blit(game_students.coin, (1270,550))
     win.blit(game_students.stu5, game_students.stu5_rect)
     win.blit(game_students.stu5_price, game_students.stu5_price_rect)
     pygame.draw.rect(win, game_students.stu6_color, game_students.stu6_pos)
+    win.blit(game_students.coin, (1270,675))
     win.blit(game_students.stu6, game_students.stu6_rect)
     win.blit(game_students.stu6_price, game_students.stu6_price_rect)
     return
 
 def displayProduction(win, game_production):
-    win.blit(game_production.github, (450,20))
+    win.blit(game_production.github, (445,20))
     win.blit(game_production.git_text, game_production.git_rect)
 
     win.blit(game_production.schoolboy, (445,130))

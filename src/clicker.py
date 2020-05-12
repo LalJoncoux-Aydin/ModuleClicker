@@ -69,9 +69,6 @@ def main():
         display.displaySeparators(win, separators)
         display.displayProduction(win, game_production)
 
-        time.sleep(0.1)
-        pygame.display.update()
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
