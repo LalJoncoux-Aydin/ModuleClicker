@@ -16,6 +16,7 @@ class Students:
     price5 = 5
     nbStudents6 = 0
     price6 = 6
+    totalNbStudents = 0
 
     def __init__(self):
         self.color = class_display.violet
@@ -33,7 +34,7 @@ class Students:
         self.stu1_rect = self.stu1.get_rect()
         self.stu1_rect.center = (1150, 60)
         self.stu1_price_rect = self.stu1_price.get_rect()
-        self.stu1_price_rect.center = (1380, 60)
+        self.stu1_price_rect.center = (1400, 60)
 
         self.stu1_pos = (1020,0,800,120)
 
@@ -46,7 +47,7 @@ class Students:
         self.stu2_rect = self.stu2.get_rect()
         self.stu2_rect.center = (1150, 190)
         self.stu2_price_rect = self.stu2_price.get_rect()
-        self.stu2_price_rect.center = (1380, 190)
+        self.stu2_price_rect.center = (1400, 190)
 
         self.stu2_pos = (1020,130,800,120)
 
@@ -59,7 +60,7 @@ class Students:
         self.stu3_rect = self.stu3.get_rect()
         self.stu3_rect.center = (1150, 320)
         self.stu3_price_rect = self.stu3_price.get_rect()
-        self.stu3_price_rect.center = (1380, 320)
+        self.stu3_price_rect.center = (1400, 320)
 
         self.stu3_pos = (1020,260,800,120)
 
@@ -72,7 +73,7 @@ class Students:
         self.stu4_rect = self.stu4.get_rect()
         self.stu4_rect.center = (1150, 450)
         self.stu4_price_rect = self.stu4_price.get_rect()
-        self.stu4_price_rect.center = (1380, 450)
+        self.stu4_price_rect.center = (1400, 450)
 
         self.stu4_pos = (1020,390,800,120)
 
@@ -85,7 +86,7 @@ class Students:
         self.stu5_rect = self.stu5.get_rect()
         self.stu5_rect.center = (1150, 580)
         self.stu5_price_rect = self.stu5_price.get_rect()
-        self.stu5_price_rect.center = (1380, 580)
+        self.stu5_price_rect.center = (1400, 580)
 
         self.stu5_pos = (1020,520,800,120)
 
@@ -98,7 +99,7 @@ class Students:
         self.stu6_rect = self.stu6.get_rect()
         self.stu6_rect.center = (1150, 700)
         self.stu6_price_rect = self.stu6_price.get_rect()
-        self.stu6_price_rect.center = (1380, 700)
+        self.stu6_price_rect.center = (1400, 700)
 
         self.stu6_pos = (1020,650,800,120)
 
@@ -165,3 +166,6 @@ class Students:
     def AddStudents6(self):
         self.nbStudents6 += 1
         return 6
+
+    def updateTotal(self):
+        self.totalNbStudents = self.nbStudents1 + self.nbStudents2 + self.nbStudents3 + self.nbStudents4 + self.nbStudents5 + self.nbStudents6

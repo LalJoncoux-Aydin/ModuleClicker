@@ -33,7 +33,7 @@ def selectStudents(win, game_students, mx, my, game_player):
         win.blit(game_students.stu5_selected, game_students.stu5_rect)
         game_students.AddStudents5()
         game_player.credit -= game_students.price5
-    if mx > 1000 and my > 640 and my < 770 and game_player.credit >= game_students.price16:
+    if mx > 1000 and my > 640 and my < 770 and game_player.credit >= game_students.price6:
         pygame.draw.rect(win, game_students.selected_color, game_students.stu6_pos)
         win.blit(game_students.stu6_selected, game_students.stu6_rect)
         game_students.AddStudents6()
@@ -60,8 +60,10 @@ def main():
         # if game_player.stu_ready == True:
         #     game_player.addCredit(students.to_add_total)
         game_students.redrawStudents(game_player)
-        module.updateCredit(game_player.credit)
+        game_students.updateTotal()
         game_production.updateQuantity(game_students)
+        module.updateCredit(game_player.credit)
+        game_player = module.updateProgressBar(game_students.totalNbStudents, game_player)
 
         win.fill(class_display.grey)
         display.displayModule(win, module)
@@ -75,8 +77,8 @@ def main():
                 sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mx, my = pygame.mouse.get_pos()
-                if mx > 90 and mx < 320 and my > 320 and my < 550:
-                    game_player.addCredit(1)
+                if mx > 90 and mx < 320 and my > 200 and my < 500:
+                    module.updateProgressBar(20, game_player)
                     win.blit(module.credit_text, module.credit_textRect)
                 else:
                     game_player = selectStudents(win, game_students, mx, my, game_player)
