@@ -152,19 +152,19 @@ class Students:
         self.nbStudents1 += 1
         return 1
     def AddStudents2(self):
-        self.nbStudents2 += 1
+        self.nbStudents2 += 2
         return 2
     def AddStudents3(self):
-        self.nbStudents3 += 1
+        self.nbStudents3 += 3
         return 3
     def AddStudents4(self):
-        self.nbStudents4 += 1
+        self.nbStudents4 += 4
         return 4
     def AddStudents5(self):
-        self.nbStudents5 += 1
+        self.nbStudents5 += 5
         return 5
     def AddStudents6(self):
-        self.nbStudents6 += 1
+        self.nbStudents6 += 6
         return 6
 
     def updateTotal(self):
