@@ -168,4 +168,4 @@ class Students:
         return 6
 
     def updateTotal(self):
-        self.totalNbStudents = self.nbStudents1 + self.nbStudents2 + self.nbStudents3 + self.nbStudents4 + self.nbStudents5 + self.nbStudents6
+        self.totalNbStudents = self.nbStudents1 + (self.nbStudents2 * 2) + (self.nbStudents3 * 3) + (self.nbStudents4 * 4) + (self.nbStudents5 * 5) + (self.nbStudents6 * 6)

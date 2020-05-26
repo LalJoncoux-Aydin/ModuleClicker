@@ -48,7 +48,7 @@ class Module:
 class Separators:
     color = lightgrey
     h_pos_1 = (400,0,15,750)
-    h_pos_2 = (575,0,5,750)
-    h_pos_3 = (730,0,5,750)
+    h_pos_2 = (570,0,5,750)
+    h_pos_3 = (690,0,5,750)
     h_pos_4 = (875,0,5,750)
     h_pos_5 = (1005,0,15,750)
