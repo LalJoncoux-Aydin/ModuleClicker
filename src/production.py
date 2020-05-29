@@ -15,47 +15,59 @@ class Production:
         self.git_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
         self.git_rect = self.git_text.get_rect()
         self.git_rect.center = (620, 70)
-        self.git_prod = self.font.render('+ 1 prod', True, class_display.lightgrey, class_display.grey)
+        self.git_nb_prod = 1
+        git_nb_prod_str = "+ " + str(self.git_nb_prod) + " prod"
+        self.git_prod = self.font.render(git_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.git_prod_rect = self.git_prod.get_rect()
         self.git_prod_rect.center = (780, 70)
 
         self.schoolboy  = pygame.image.load("../assets/schoolboy.png").convert_alpha()
         self.boy_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
-        self.boy_prod = self.font.render('+ 2 prod', True, class_display.lightgrey, class_display.grey)
         self.boy_rect = self.boy_text.get_rect()
         self.boy_rect.center = (620, 190)
+        self.boy_nb_prod = 2
+        boy_nb_prod_str = "+ " + str(self.boy_nb_prod) + " prod"
+        self.boy_prod = self.font.render(boy_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.boy_prod_rect = self.boy_prod.get_rect()
         self.boy_prod_rect.center = (780, 190)
 
         self.aztec  = pygame.image.load("../assets/aztec.png").convert_alpha()
         self.aztec_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
-        self.aztec_prod = self.font.render('+ 3 prod', True, class_display.lightgrey, class_display.grey)
         self.aztec_rect = self.aztec_text.get_rect()
         self.aztec_rect.center = (620, 315)
+        self.aztec_nb_prod = 3
+        aztec_nb_prod_str = "+ " + str(self.aztec_nb_prod) + " prod"
+        self.aztec_prod = self.font.render(aztec_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.aztec_prod_rect = self.aztec_prod.get_rect()
         self.aztec_prod_rect.center = (780, 315)
 
         self.koala  = pygame.image.load("../assets/koala.png").convert_alpha()
         self.koala_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
-        self.koala_prod = self.font.render('+ 4 prod', True, class_display.lightgrey, class_display.grey)
         self.koala_rect = self.koala_text.get_rect()
         self.koala_rect.center = (620, 440)
+        self.koala_nb_prod = 4
+        koala_nb_prod_str = "+ " + str(self.koala_nb_prod) + " prod"
+        self.koala_prod = self.font.render(koala_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.koala_prod_rect = self.koala_prod.get_rect()
         self.koala_prod_rect.center = (780, 440)
 
         self.monster  = pygame.image.load("../assets/monster.png").convert_alpha()
         self.monster_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
-        self.monster_prod = self.font.render('+ 5 prod', True, class_display.lightgrey, class_display.grey)
         self.monster_rect = self.monster_text.get_rect()
         self.monster_rect.center = (620, 570)
+        self.monster_nb_prod = 5
+        monster_nb_prod_str = "+ " + str(self.monster_nb_prod) + " prod"
+        self.monster_prod = self.font.render(monster_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.monster_prod_rect = self.monster_prod.get_rect()
         self.monster_prod_rect.center = (780, 570)
 
         self.gourou  = pygame.image.load("../assets/gourou.png").convert_alpha()
         self.gourou_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
-        self.gourou_prod = self.font.render('+ 6 prod', True, class_display.lightgrey, class_display.grey)
         self.gourou_rect = self.gourou_text.get_rect()
         self.gourou_rect.center = (620, 690)
+        self.gourou_nb_prod = 6
+        gourou_nb_prod_str = "+ " + str(self.gourou_nb_prod) + " prod"
+        self.gourou_prod = self.font.render(gourou_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.gourou_prod_rect = self.gourou_prod.get_rect()
         self.gourou_prod_rect.center = (780, 690)
 
@@ -77,3 +89,9 @@ class Production:
 
         gourou_cl_text = 'x ' + str(game_students.nbStudents6)
         self.gourou_text = self.font.render(gourou_cl_text, True, class_display.lightgrey, class_display.grey)
+
+    # def updateProduction(self):
+    #     self.aztec_nb_prod = "+ " + str(3) + " prod"
+    #     self.aztec_prod = self.font.render(self.aztec_nb_prod, True, class_display.lightgrey, class_display.grey)
+    #     self.aztec_prod_rect = self.aztec_prod.get_rect()
+    #     self.aztec_prod_rect.center = (780, 315)

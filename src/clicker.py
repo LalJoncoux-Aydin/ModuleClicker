@@ -55,16 +55,9 @@ def main():
     game_player = player.Player()
     game_students = student.Students()
     game_production = production.Production()
+    to_add_module = 0
 
     while True:
-        # if game_player.stu_ready == True:
-        #     game_player.addCredit(students.to_add_total)
-        game_students.redrawStudents(game_player)
-        game_students.updateTotal()
-        game_production.updateQuantity(game_students)
-        module.updateCredit(game_player.credit)
-        game_player = module.updateProgressBar(game_students.totalNbStudents, game_player)
-
         win.fill(class_display.grey)
         display.displayModule(win, module)
         display.displayStudents(win, game_students)
@@ -78,12 +71,18 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mx, my = pygame.mouse.get_pos()
                 if mx > 90 and mx < 320 and my > 200 and my < 500:
-                    module.updateProgressBar(20, game_player)
+                    to_add_module = 20
                     win.blit(module.credit_text, module.credit_textRect)
                 else:
                     game_player = selectStudents(win, game_students, mx, my, game_player)
         time.sleep(0.1)
         pygame.display.update()
+
+        game_students.redrawStudents(game_player)
+        game_production.updateQuantity(game_students)
+        module.updateCredit(game_player.credit)
+        game_player = module.updateProgressBar(to_add_module, game_player, game_students, game_production)
+        to_add_module = 0
     return
 
 # ----------------------- #

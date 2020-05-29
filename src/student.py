@@ -152,20 +152,17 @@ class Students:
         self.nbStudents1 += 1
         return 1
     def AddStudents2(self):
-        self.nbStudents2 += 2
+        self.nbStudents2 += 1
         return 2
     def AddStudents3(self):
-        self.nbStudents3 += 3
+        self.nbStudents3 += 1
         return 3
     def AddStudents4(self):
-        self.nbStudents4 += 4
+        self.nbStudents4 += 1
         return 4
     def AddStudents5(self):
-        self.nbStudents5 += 5
+        self.nbStudents5 += 1
         return 5
     def AddStudents6(self):
-        self.nbStudents6 += 6
+        self.nbStudents6 += 1
         return 6
-
-    def updateTotal(self):
-        self.totalNbStudents = self.nbStudents1 + (self.nbStudents2 * 2) + (self.nbStudents3 * 3) + (self.nbStudents4 * 4) + (self.nbStudents5 * 5) + (self.nbStudents6 * 6)

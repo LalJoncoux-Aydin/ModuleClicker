@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import pygame, sys, time
+import student
 from pygame.locals import *
 
 # colors
@@ -36,10 +37,11 @@ class Module:
         self.my_credits_display = "Credits : " + str(own_credit)
         self.credit_text = self.credit_font.render(self.my_credits_display, True, lightgrey, darkblue)
 
-    def updateProgressBar(self, to_add, game_player):
+    def updateProgressBar(self, to_add, game_player, game_students, game_production):
         self.progress_pos = (65, 550, self.i, 44)
         self.progress_color = grey
         self.i += to_add
+        self.i += (game_students.nbStudents1 * game_production.git_nb_prod) + (game_students.nbStudents2 * game_production.boy_nb_prod) + (game_students.nbStudents3 * game_production.aztec_nb_prod) + (game_students.nbStudents4 * game_production.koala_nb_prod) + (game_students.nbStudents5 * game_production.monster_nb_prod) + (game_students.nbStudents5 * game_production.gourou_nb_prod)
         if self.i >= 290:
             self.i = 0
             game_player.credit += 1
