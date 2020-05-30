@@ -90,8 +90,21 @@ class Production:
         gourou_cl_text = 'x ' + str(game_students.nbStudents6)
         self.gourou_text = self.font.render(gourou_cl_text, True, class_display.lightgrey, class_display.grey)
 
-    # def updateProduction(self):
-    #     self.aztec_nb_prod = "+ " + str(3) + " prod"
-    #     self.aztec_prod = self.font.render(self.aztec_nb_prod, True, class_display.lightgrey, class_display.grey)
-    #     self.aztec_prod_rect = self.aztec_prod.get_rect()
-    #     self.aztec_prod_rect.center = (780, 315)
+    def updateProduction(self):
+        git_nb_prod_str = "+ " + str(self.git_nb_prod) + " prod"
+        self.git_prod = self.font.render(git_nb_prod_str, True, class_display.lightgrey, class_display.grey)
+
+        boy_nb_prod_str = "+ " + str(self.boy_nb_prod) + " prod"
+        self.boy_prod = self.font.render(boy_nb_prod_str, True, class_display.lightgrey, class_display.grey)
+
+        aztec_nb_prod_str = "+ " + str(self.aztec_nb_prod) + " prod"
+        self.aztec_prod = self.font.render(aztec_nb_prod_str, True, class_display.lightgrey, class_display.grey)
+
+        koala_nb_prod_str = "+ " + str(self.koala_nb_prod) + " prod"
+        self.koala_prod = self.font.render(koala_nb_prod_str, True, class_display.lightgrey, class_display.grey)
+
+        monster_nb_prod_str = "+ " + str(self.monster_nb_prod) + " prod"
+        self.monster_prod = self.font.render(monster_nb_prod_str, True, class_display.lightgrey, class_display.grey)
+
+        gourou_nb_prod_str = "+ " + str(self.gourou_nb_prod) + " prod"
+        self.gourou_prod = self.font.render(gourou_nb_prod_str, True, class_display.lightgrey, class_display.grey)

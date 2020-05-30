@@ -48,7 +48,7 @@ def displayProduction(win, game_production):
     win.blit(game_production.boy_text, game_production.boy_rect)
     win.blit(game_production.boy_prod, game_production.boy_prod_rect)
 
-    win.blit(game_production.aztec, (440,250))
+    win.blit(game_production.aztec, (440,245))
     win.blit(game_production.upgrade_bonus, (900,280))
     win.blit(game_production.aztec_text, game_production.aztec_rect)
     win.blit(game_production.aztec_prod, game_production.aztec_prod_rect)
@@ -59,12 +59,12 @@ def displayProduction(win, game_production):
     win.blit(game_production.koala_prod, game_production.koala_prod_rect)
 
     win.blit(game_production.monster, (453,530))
-    win.blit(game_production.upgrade_bonus, (900,540))
+    win.blit(game_production.upgrade_bonus, (900,530))
     win.blit(game_production.monster_text, game_production.monster_rect)
     win.blit(game_production.monster_prod, game_production.monster_prod_rect)
 
     win.blit(game_production.gourou, (455,640))
-    win.blit(game_production.upgrade_bonus, (900,660))
+    win.blit(game_production.upgrade_bonus, (900,650))
     win.blit(game_production.gourou_text, game_production.gourou_rect)
     win.blit(game_production.gourou_prod, game_production.gourou_prod_rect)
     return

@@ -40,6 +40,21 @@ def selectStudents(win, game_students, mx, my, game_player):
         game_player.credit -= game_students.price6
     return game_player
 
+def selectProduction(win, game_production, mx, my, game_player):
+    if mx > 900 and mx < 980 and my < 120:
+        game_production.git_nb_prod += 1
+    if mx > 900 and mx < 980 and my > 120 and my < 250:
+        game_production.boy_nb_prod += 1
+    if mx > 900 and mx < 980 and my > 250 and my < 380:
+        game_production.aztec_nb_prod += 1
+    if mx > 900 and mx < 980 and my > 380 and my < 510:
+        game_production.koala_nb_prod += 1
+    if mx > 900 and mx < 980 and my > 510 and my < 640:
+        game_production.monster_nb_prod += 1
+    if mx > 900 and mx < 980 and my > 640 and my < 770:
+        game_production.gourou_nb_prod += 1
+    return game_production
+
 def main():
     pygame.init()
 
@@ -74,12 +89,14 @@ def main():
                     to_add_module = 20
                     win.blit(module.credit_text, module.credit_textRect)
                 else:
+                    game_production = selectProduction(win, game_production, mx, my, game_player)
                     game_player = selectStudents(win, game_students, mx, my, game_player)
         time.sleep(0.1)
         pygame.display.update()
 
         game_students.redrawStudents(game_player)
         game_production.updateQuantity(game_students)
+        game_production.updateProduction()
         module.updateCredit(game_player.credit)
         game_player = module.updateProgressBar(to_add_module, game_player, game_students, game_production)
         to_add_module = 0
