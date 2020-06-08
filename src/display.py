@@ -39,32 +39,32 @@ def displayStudents(win, game_students):
 
 def displayProduction(win, game_production):
     win.blit(game_production.github, (445,20))
-    win.blit(game_production.upgrade_bonus, (900,30))
+    win.blit(game_production.git_upgrade_bonus, (900,30))
     win.blit(game_production.git_text, game_production.git_rect)
     win.blit(game_production.git_prod, game_production.git_prod_rect)
 
     win.blit(game_production.schoolboy, (445,130))
-    win.blit(game_production.upgrade_bonus, (900,150))
+    win.blit(game_production.boy_upgrade_bonus, (900,150))
     win.blit(game_production.boy_text, game_production.boy_rect)
     win.blit(game_production.boy_prod, game_production.boy_prod_rect)
 
     win.blit(game_production.aztec, (440,245))
-    win.blit(game_production.upgrade_bonus, (900,280))
+    win.blit(game_production.aztec_upgrade_bonus, (900,280))
     win.blit(game_production.aztec_text, game_production.aztec_rect)
     win.blit(game_production.aztec_prod, game_production.aztec_prod_rect)
 
     win.blit(game_production.koala, (435,375))
-    win.blit(game_production.upgrade_bonus, (900,400))
+    win.blit(game_production.koala_upgrade_bonus, (900,400))
     win.blit(game_production.koala_text, game_production.koala_rect)
     win.blit(game_production.koala_prod, game_production.koala_prod_rect)
 
     win.blit(game_production.monster, (453,530))
-    win.blit(game_production.upgrade_bonus, (900,530))
+    win.blit(game_production.monster_upgrade_bonus, (900,530))
     win.blit(game_production.monster_text, game_production.monster_rect)
     win.blit(game_production.monster_prod, game_production.monster_prod_rect)
 
     win.blit(game_production.gourou, (455,640))
-    win.blit(game_production.upgrade_bonus, (900,650))
+    win.blit(game_production.gourou_upgrade_bonus, (900,650))
     win.blit(game_production.gourou_text, game_production.gourou_rect)
     win.blit(game_production.gourou_prod, game_production.gourou_prod_rect)
     return

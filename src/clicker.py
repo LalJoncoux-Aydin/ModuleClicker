@@ -41,18 +41,24 @@ def selectStudents(win, game_students, mx, my, game_player):
     return game_player
 
 def selectProduction(win, game_production, mx, my, game_player):
-    if mx > 900 and mx < 980 and my < 120:
+    if mx > 900 and mx < 980 and my < 120 and game_production.git_upgradable == True:
         game_production.git_nb_prod += 1
-    if mx > 900 and mx < 980 and my > 120 and my < 250:
+        game_player.credit -= 1
+    if mx > 900 and mx < 980 and my > 120 and my < 250 and game_production.git_upgradable == True:
         game_production.boy_nb_prod += 1
-    if mx > 900 and mx < 980 and my > 250 and my < 380:
+        game_player.credit -= 2
+    if mx > 900 and mx < 980 and my > 250 and my < 380 and game_production.git_upgradable == True:
         game_production.aztec_nb_prod += 1
-    if mx > 900 and mx < 980 and my > 380 and my < 510:
+        game_player.credit -= 3
+    if mx > 900 and mx < 980 and my > 380 and my < 510 and game_production.git_upgradable == True:
         game_production.koala_nb_prod += 1
-    if mx > 900 and mx < 980 and my > 510 and my < 640:
+        game_player.credit -= 4
+    if mx > 900 and mx < 980 and my > 510 and my < 640 and game_production.git_upgradable == True:
         game_production.monster_nb_prod += 1
-    if mx > 900 and mx < 980 and my > 640 and my < 770:
+        game_player.credit -= 5
+    if mx > 900 and mx < 980 and my > 640 and my < 770 and game_production.git_upgradable == True:
         game_production.gourou_nb_prod += 1
+        game_player.credit -= 6
     return game_production
 
 def main():
@@ -97,6 +103,7 @@ def main():
         game_students.redrawStudents(game_player)
         game_production.updateQuantity(game_students)
         game_production.updateProduction()
+        game_production.updateUpgrade(game_player, game_students)
         module.updateCredit(game_player.credit)
         game_player = module.updateProgressBar(to_add_module, game_player, game_students, game_production)
         to_add_module = 0

@@ -8,8 +8,6 @@ class Production:
 
     def __init__(self):
         self.font = pygame.font.Font('freesansbold.ttf', 32)
-        self.upgrade = pygame.image.load("../assets/upgrade.png").convert_alpha()
-        self.upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
 
         self.github = pygame.image.load("../assets/github.png").convert_alpha()
         self.git_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
@@ -20,6 +18,8 @@ class Production:
         self.git_prod = self.font.render(git_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.git_prod_rect = self.git_prod.get_rect()
         self.git_prod_rect.center = (780, 70)
+        self.git_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+        self.git_upgradable = False
 
         self.schoolboy  = pygame.image.load("../assets/schoolboy.png").convert_alpha()
         self.boy_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
@@ -30,6 +30,8 @@ class Production:
         self.boy_prod = self.font.render(boy_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.boy_prod_rect = self.boy_prod.get_rect()
         self.boy_prod_rect.center = (780, 190)
+        self.boy_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+        self.boy_upgradable = False
 
         self.aztec  = pygame.image.load("../assets/aztec.png").convert_alpha()
         self.aztec_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
@@ -40,6 +42,8 @@ class Production:
         self.aztec_prod = self.font.render(aztec_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.aztec_prod_rect = self.aztec_prod.get_rect()
         self.aztec_prod_rect.center = (780, 315)
+        self.aztec_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+        self.aztec_upgradable = False
 
         self.koala  = pygame.image.load("../assets/koala.png").convert_alpha()
         self.koala_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
@@ -50,6 +54,8 @@ class Production:
         self.koala_prod = self.font.render(koala_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.koala_prod_rect = self.koala_prod.get_rect()
         self.koala_prod_rect.center = (780, 440)
+        self.koala_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+        self.koala_upgradable = False
 
         self.monster  = pygame.image.load("../assets/monster.png").convert_alpha()
         self.monster_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
@@ -60,6 +66,8 @@ class Production:
         self.monster_prod = self.font.render(monster_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.monster_prod_rect = self.monster_prod.get_rect()
         self.monster_prod_rect.center = (780, 570)
+        self.monster_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+        self.monster_upgradable = False
 
         self.gourou  = pygame.image.load("../assets/gourou.png").convert_alpha()
         self.gourou_text = self.font.render('x 0', True, class_display.lightgrey, class_display.grey)
@@ -70,6 +78,8 @@ class Production:
         self.gourou_prod = self.font.render(gourou_nb_prod_str, True, class_display.lightgrey, class_display.grey)
         self.gourou_prod_rect = self.gourou_prod.get_rect()
         self.gourou_prod_rect.center = (780, 690)
+        self.gourou_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+        self.gourou_upgradable = False
 
     def updateQuantity(self, game_students):
         git_cl_text = 'x ' + str(game_students.nbStudents1)
@@ -108,3 +118,46 @@ class Production:
 
         gourou_nb_prod_str = "+ " + str(self.gourou_nb_prod) + " prod"
         self.gourou_prod = self.font.render(gourou_nb_prod_str, True, class_display.lightgrey, class_display.grey)
+
+    def updateUpgrade(self, game_player, game_students):
+        if game_player.credit >= 1 and game_students.nbStudents1 > 0:
+            self.git_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus_selected.png").convert_alpha()
+            self.git_upgradable = True
+        else:
+            self.git_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+            self.git_upgradable = False
+
+        if game_player.credit >= 2 and game_students.nbStudents2 > 0:
+            self.boy_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus_selected.png").convert_alpha()
+            self.boy_upgradable = True
+        else:
+            self.boy_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+            self.boy_upgradable = False
+
+        if game_player.credit >= 3 and game_students.nbStudents3 > 0:
+            self.aztec_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus_selected.png").convert_alpha()
+            self.aztec_upgradable = True
+        else:
+            self.aztec_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+            self.aztec_upgradable = False
+
+        if game_player.credit >= 4 and game_students.nbStudents4 > 0:
+            self.koala_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus_selected.png").convert_alpha()
+            self.koala_upgradable = True
+        else:
+            self.koala_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+            self.koala_upgradable = False
+
+        if game_player.credit >= 5 and game_students.nbStudents5 > 0:
+            self.monster_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus_selected.png").convert_alpha()
+            self.monster_upgradable = True
+        else:
+            self.monster_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+            self.monster_upgradable = False
+
+        if game_player.credit >= 6 and game_students.nbStudents6 > 0:
+            self.gourou_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus_selected.png").convert_alpha()
+            self.gourou_upgradable = True
+        else:
+            self.gourou_upgrade_bonus = pygame.image.load("../assets/upgrade_bonus.png").convert_alpha()
+            self.gourou_upgradable = False
